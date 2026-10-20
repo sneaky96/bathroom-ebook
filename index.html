@@ -12,7 +12,7 @@
   <meta name="description" content="An 8-page illustrated PDF guide to planning a bathroom renovation: budget, layout, fixtures and finishes, lighting, and ventilation. $14.97, 60-day money-back guarantee." />
   <meta property="og:title" content="Let’s Talk About Renovation: Things to Consider in Your Bathroom" />
   <meta property="og:description" content="An 8-page illustrated planning guide. Instant PDF download, $14.97." />
-  <meta property="og:image" content="img0.jpg" />
+  <meta property="og:image" content="https://bathroom-ebook.vercel.app/cover-og.jpg" />
   <style>
     :root {
       color-scheme: light dark;
@@ -171,6 +171,10 @@
       border: 1px solid #d8d8d8;
       border-radius: 3px;
     }
+    .book.book-3d { width: min(82%, 400px); transform: none; filter: none; }
+    .book.book-3d::before { display: none; }
+    .book.book-3d picture { display: block; }
+    .book.book-3d img { border-radius: 0; width: 100%; height: auto; display: block; }
     .page-peek {
       position: absolute;
       width: 38%;
@@ -286,7 +290,9 @@
       .footer-line { flex-direction: column; }
     }
 
+    @media (max-width: 880px) { .book.book-3d { width: min(70%, 340px); } }
     @media (max-width: 600px) {
+      .book.book-3d { width: min(74%, 290px); }
       body { font-size: 17px; padding-bottom: 78px; }
       .wrap { width: min(100% - 28px, 1160px); }
       .hero { padding-top: 38px; }
@@ -369,7 +375,7 @@
           <p class="guarantee-line"><strong>60-day money-back guarantee.</strong> <a href="#refund">See the refund policy</a>.</p>
         </div>
         <div class="book-stage" aria-label="Preview of the bathroom renovation guide">
-          <div class="book"><img src="img0.jpg" alt="Cover of Let's Talk About Renovation by Marcia Bailey"></div>
+          <div class="book book-3d"><picture><source srcset="cover-3d.webp" type="image/webp"><img src="cover-3d.png" width="543" height="800" alt="Book cover of Let's Talk About Renovation: Things to Consider in Your Bathroom by Marcia Bailey"></picture></div>
           <img class="page-peek" src="img1.jpg" alt="Preview of the guide's layout and design chapter">
         </div>
       </div>
